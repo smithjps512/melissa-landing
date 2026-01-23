@@ -1,0 +1,10 @@
+{
+  "name": "melissa-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Marketing landing page for Melissa for Educators",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build needed'"
+  }
+}

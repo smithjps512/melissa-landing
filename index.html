@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Melissa for Educators | Get Your Weekends Back</title>
+  <meta name="description" content="Melissa creates your lesson plans, worksheets, and materials in minutes — so you can focus on actually teaching. Save 8+ hours every week.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Melissa for Educators | Get Your Weekends Back">
+  <meta property="og:description" content="AI teaching assistant that creates lesson plans in 5 minutes, worksheets in 2 minutes, and gives you 8+ hours back every week.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://melissaforeducators.ai">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --maroon: #6B1A1A;
+      --maroon-dark: #5a1515;
+      --maroon-light: #8B2A2A;
+      --gold: #FFB512;
+      --gold-light: #FFD54F;
+      --gold-pale: #FFF8E7;
+      --cream: #FFFDF9;
+      --gray-50: #F9FAFB;
+      --gray-100: #F3F4F6;
+      --gray-200: #E5E7EB;
+      --gray-400: #9CA3AF;
+      --gray-500: #6B7280;
+      --gray-600: #4B5563;
+      --gray-700: #374151;
+      --gray-900: #111827;
+      --green: #059669;
+      --green-light: #D1FAE5;
+      
+      --font-display: 'Source Serif 4', Georgia, serif;
+      --font-body: 'Inter', -apple-system, sans-serif;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: var(--font-body);
+      color: var(--gray-900);
+      background: var(--cream);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1rem 2rem;
+      transition: all 0.3s ease;
+    }
+    
+    header.scrolled {
+      background: rgba(255, 253, 249, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 20px rgba(107, 26, 26, 0.08);
+    }
+    
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--maroon);
+      text-decoration: none;
+    }
+    
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+    
+    .nav-links a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--gray-600);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    .nav-links a:hover {
+      color: var(--maroon);
+    }
+    
+    .nav-cta {
+      background: var(--maroon);
+      color: white !important;
+      padding: 0.6rem 1.25rem;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    
+    .nav-cta:hover {
+      background: var(--maroon-dark);
+    }
+    
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 8rem 2rem 4rem;
+      background: linear-gradient(180deg, var(--cream) 0%, white 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(255, 181, 18, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    
+    .hero-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--gold-pale);
+      color: var(--maroon);
+      padding: 0.5rem 1rem;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    
+    .hero-badge svg {
+      width: 16px;
+      height: 16px;
+    }
+    
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 700;
+      color: var(--gray-900);
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+    }
+    
+    .hero h1 span {
+      color: var(--maroon);
+    }
+    
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: var(--gray-600);
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+    
+    .hero-cta-group {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--maroon);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .btn-primary:hover {
+      background: var(--maroon-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(107, 26, 26, 0.3);
+    }
+    
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: white;
+      color: var(--gray-700);
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: 2px solid var(--gray-200);
+      transition: all 0.2s;
+    }
+    
+    .btn-secondary:hover {
+      border-color: var(--maroon);
+      color: var(--maroon);
+    }
+    
+    .hero-note {
+      font-size: 0.9rem;
+      color: var(--gray-500);
+    }
+    
+    .hero-note strong {
+      color: var(--gray-700);
+    }
+    
+    /* Time Savings Card */
+    .time-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 40px rgba(107, 26, 26, 0.1);
+      padding: 2rem;
+      position: relative;
+    }
+    
+    .time-card::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--maroon) 100%);
+      border-radius: 18px;
+      z-index: -1;
+    }
+    
+    .time-card-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    
+    .time-card-header h2 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--gray-900);
+    }
+    
+    .time-row {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--gray-100);
+    }
+    
+    .time-row:last-of-type {
+      border-bottom: none;
+    }
+    
+    .time-task {
+      font-weight: 500;
+      color: var(--gray-700);
+    }
+    
+    .time-before {
+      text-align: right;
+      color: var(--gray-400);
+      font-size: 0.95rem;
+      text-decoration: line-through;
+    }
+    
+    .time-arrow {
+      color: var(--gold);
+      font-weight: bold;
+    }
+    
+    .time-after {
+      font-weight: 700;
+      color: var(--green);
+    }
+    
+    .time-total {
+      background: var(--maroon);
+      color: white;
+      margin: 1.5rem -2rem -2rem;
+      padding: 1.5rem 2rem;
+      border-radius: 0 0 16px 16px;
+      text-align: center;
+    }
+    
+    .time-total-label {
+      font-size: 0.9rem;
+      opacity: 0.9;
+      margin-bottom: 0.25rem;
+    }
+    
+    .time-total-value {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    
+    .time-total-value span {
+      color: var(--gold);
+    }
+    
+    /* What You'll Do Section */
+    .reclaim {
+      padding: 6rem 2rem;
+      background: white;
+    }
+    
+    .reclaim-container {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .section-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    
+    .reclaim h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 1rem;
+    }
+    
+    .reclaim-subtitle {
+      font-size: 1.15rem;
+      color: var(--gray-600);
+      margin-bottom: 3rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .reclaim-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    
+    .reclaim-item {
+      padding: 2rem;
+      border-radius: 12px;
+      background: var(--gray-50);
+      transition: all 0.3s ease;
+    }
+    
+    .reclaim-item:hover {
+      background: var(--gold-pale);
+      transform: translateY(-4px);
+    }
+    
+    .reclaim-icon {
+      width: 48px;
+      height: 48px;
+      background: white;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      font-size: 1.5rem;
+    }
+    
+    .reclaim-item h3 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--gray-900);
+      margin-bottom: 0.5rem;
+    }
+    
+    .reclaim-item p {
+      font-size: 0.95rem;
+      color: var(--gray-600);
+    }
+    
+    /* Features Section */
+    .features {
+      padding: 6rem 2rem;
+      background: var(--gray-50);
+    }
+    
+    .features-container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    
+    .features-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    
+    .features h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 1rem;
+    }
+    
+    .features-subtitle {
+      font-size: 1.15rem;
+      color: var(--gray-600);
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+    
+    .feature-card {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
+      transition: all 0.3s ease;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(107, 26, 26, 0.1);
+    }
+    
+    .feature-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--maroon);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    
+    .feature-icon svg {
+      width: 28px;
+      height: 28px;
+      stroke: white;
+      stroke-width: 2;
+      fill: none;
+    }
+    
+    .feature-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--gray-900);
+      margin-bottom: 0.75rem;
+    }
+    
+    .feature-card p {
+      color: var(--gray-600);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+    
+    .feature-tag {
+      display: inline-block;
+      background: var(--gold-pale);
+      color: var(--maroon);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.35rem 0.75rem;
+      border-radius: 100px;
+    }
+    
+    /* AI Guardrails Section */
+    .guardrails {
+      padding: 6rem 2rem;
+      background: var(--maroon);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .guardrails::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(135deg, transparent 0%, rgba(255, 181, 18, 0.1) 100%);
+      pointer-events: none;
+    }
+    
+    .guardrails-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .guardrails h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    
+    .guardrails h2 span {
+      color: var(--gold);
+    }
+    
+    .guardrails-text p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+    
+    .guardrails-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--gold);
+      font-weight: 600;
+      text-decoration: none;
+      transition: gap 0.2s;
+    }
+    
+    .guardrails-cta:hover {
+      gap: 0.75rem;
+    }
+    
+    .zones-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .zone-item {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      border-left: 4px solid;
+    }
+    
+    .zone-item.prohibited {
+      border-color: #EF4444;
+    }
+    
+    .zone-item.assisted {
+      border-color: #F59E0B;
+    }
+    
+    .zone-item.independent {
+      border-color: #10B981;
+    }
+    
+    .zone-badge {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+    
+    .zone-item.prohibited .zone-badge {
+      background: #EF4444;
+    }
+    
+    .zone-item.assisted .zone-badge {
+      background: #F59E0B;
+    }
+    
+    .zone-item.independent .zone-badge {
+      background: #10B981;
+    }
+    
+    .zone-content h4 {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    
+    .zone-content p {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+    
+    /* Pricing Section */
+    .pricing {
+      padding: 6rem 2rem;
+      background: white;
+    }
+    
+    .pricing-container {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .pricing h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 1rem;
+    }
+    
+    .pricing-subtitle {
+      font-size: 1.15rem;
+      color: var(--gray-600);
+      margin-bottom: 3rem;
+    }
+    
+    .pricing-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .pricing-card {
+      background: var(--gray-50);
+      border-radius: 16px;
+      padding: 2.5rem;
+      text-align: left;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    
+    .pricing-card:hover {
+      transform: translateY(-4px);
+    }
+    
+    .pricing-card.featured {
+      background: var(--maroon);
+      color: white;
+    }
+    
+    .pricing-card.featured .pricing-label,
+    .pricing-card.featured .pricing-price span,
+    .pricing-card.featured .pricing-features li {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .pricing-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--gray-500);
+      margin-bottom: 1rem;
+    }
+    
+    .pricing-price {
+      margin-bottom: 1.5rem;
+    }
+    
+    .pricing-price strong {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    
+    .pricing-card.featured .pricing-price strong {
+      color: var(--gold);
+    }
+    
+    .pricing-price span {
+      font-size: 1rem;
+      color: var(--gray-500);
+    }
+    
+    .pricing-features {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+    
+    .pricing-features li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.5rem 0;
+      color: var(--gray-600);
+    }
+    
+    .pricing-features li::before {
+      content: '✓';
+      color: var(--green);
+      font-weight: 700;
+    }
+    
+    .pricing-card.featured .pricing-features li::before {
+      color: var(--gold);
+    }
+    
+    .pricing-card .btn-primary {
+      width: 100%;
+      justify-content: center;
+    }
+    
+    .pricing-card.featured .btn-primary {
+      background: var(--gold);
+      color: var(--maroon);
+    }
+    
+    .pricing-card.featured .btn-primary:hover {
+      background: var(--gold-light);
+    }
+    
+    .pricing-note {
+      font-size: 0.95rem;
+      color: var(--gray-500);
+    }
+    
+    /* Final CTA */
+    .final-cta {
+      padding: 6rem 2rem;
+      background: linear-gradient(135deg, var(--gray-900) 0%, var(--maroon-dark) 100%);
+      text-align: center;
+      color: white;
+    }
+    
+    .final-cta-container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .final-cta h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    
+    .final-cta p {
+      font-size: 1.15rem;
+      opacity: 0.9;
+      margin-bottom: 2rem;
+    }
+    
+    .final-cta .btn-primary {
+      background: var(--gold);
+      color: var(--maroon);
+      padding: 1.25rem 2.5rem;
+      font-size: 1.1rem;
+    }
+    
+    .final-cta .btn-primary:hover {
+      background: var(--gold-light);
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--gray-900);
+      color: white;
+      padding: 4rem 2rem 2rem;
+    }
+    
+    .footer-container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 4rem;
+      margin-bottom: 3rem;
+    }
+    
+    .footer-brand h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    
+    .footer-brand p {
+      color: var(--gray-400);
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+    
+    .footer-section h4 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+      color: var(--gray-400);
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .footer-links a {
+      color: var(--gray-400);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+    
+    .footer-links a:hover {
+      color: white;
+    }
+    
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid var(--gray-700);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+      color: var(--gray-400);
+    }
+    
+    .footer-bottom a {
+      color: var(--gray-400);
+      text-decoration: none;
+    }
+    
+    .footer-bottom a:hover {
+      color: white;
+    }
+    
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      
+      .hero-cta-group {
+        justify-content: center;
+      }
+      
+      .time-card {
+        max-width: 450px;
+        margin: 0 auto;
+      }
+      
+      .reclaim-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .guardrails-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .pricing-cards {
+        grid-template-columns: 1fr;
+      }
+      
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+      
+      .nav-links {
+        display: none;
+      }
+    }
+    
+    @media (max-width: 600px) {
+      .hero {
+        padding: 6rem 1.5rem 3rem;
+      }
+      
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .hero-cta-group {
+        flex-direction: column;
+      }
+      
+      .btn-primary, .btn-secondary {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <nav>
+      <a href="#" class="logo">Melissa</a>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="https://app.melissaforeducators.ai/login">Log In</a></li>
+        <li><a href="https://app.melissaforeducators.ai/signup" class="nav-cta">Start Free Trial</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+          </svg>
+          Now in Beta — Join 500+ Teachers
+        </div>
+        
+        <h1>What if lesson planning took <span>5 minutes</span> instead of 50?</h1>
+        
+        <p class="hero-subtitle">
+          Melissa creates your lesson plans, worksheets, and materials — 
+          so you can focus on actually teaching.
+        </p>
+        
+        <div class="hero-cta-group">
+          <a href="https://app.melissaforeducators.ai/signup" class="btn-primary">
+            Start Free Trial
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="#features" class="btn-secondary">
+            See How It Works
+          </a>
+        </div>
+        
+        <p class="hero-note">
+          <strong>Free for 7 days.</strong> No credit card required.
+        </p>
+      </div>
+      
+      <div class="time-card">
+        <div class="time-card-header">
+          <h2>Time You'll Get Back</h2>
+        </div>
+        
+        <div class="time-row">
+          <span class="time-task">Lesson Plan</span>
+          <span class="time-before">60 min</span>
+          <span class="time-arrow">→</span>
+          <span class="time-after">5 min</span>
+        </div>
+        
+        <div class="time-row">
+          <span class="time-task">Worksheet</span>
+          <span class="time-before">40 min</span>
+          <span class="time-arrow">→</span>
+          <span class="time-after">2 min</span>
+        </div>
+        
+        <div class="time-row">
+          <span class="time-task">Handout</span>
+          <span class="time-before">30 min</span>
+          <span class="time-arrow">→</span>
+          <span class="time-after">1 min</span>
+        </div>
+        
+        <div class="time-row">
+          <span class="time-task">Exit Ticket</span>
+          <span class="time-before">15 min</span>
+          <span class="time-arrow">→</span>
+          <span class="time-after">30 sec</span>
+        </div>
+        
+        <div class="time-total">
+          <p class="time-total-label">Every week, you save</p>
+          <p class="time-total-value"><span>8+</span> hours</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reclaim Your Time Section -->
+  <section class="reclaim">
+    <div class="reclaim-container">
+      <span class="section-label">Reclaim Your Time</span>
+      <h2>8 hours back. Every week.</h2>
+      <p class="reclaim-subtitle">
+        That's 288 hours per year — time for the things that actually matter.
+      </p>
+      
+      <div class="reclaim-grid">
+        <div class="reclaim-item">
+          <div class="reclaim-icon">👨‍👩‍👧‍👦</div>
+          <h3>Your Family</h3>
+          <p>Dinner at the table. Weekend mornings. Being present.</p>
+        </div>
+        
+        <div class="reclaim-item">
+          <div class="reclaim-icon">🎓</div>
+          <h3>Your Students</h3>
+          <p>Real conversations. Individual attention. The moments that change lives.</p>
+        </div>
+        
+        <div class="reclaim-item">
+          <div class="reclaim-icon">☕</div>
+          <h3>Yourself</h3>
+          <p>Rest. Hobbies. The life outside the classroom you deserve.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="features-container">
+      <div class="features-header">
+        <span class="section-label">What Melissa Does</span>
+        <h2>Everything you need. Nothing you don't.</h2>
+        <p class="features-subtitle">Built by educators who understand how teaching actually works.</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          </div>
+          <h3>Lesson Plans in Minutes</h3>
+          <p>Tell Melissa what you're teaching. Get a complete lesson — hook, instruction, activities, closure — aligned to your state standards.</p>
+          <span class="feature-tag">Standards-Aligned</span>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <h3>One-Click Materials</h3>
+          <p>Generate worksheets, handouts, exit tickets, and study guides instantly. Export to PDF or Word — ready to print or share.</p>
+          <span class="feature-tag">Print-Ready</span>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+          </div>
+          <h3>Smart Assignments</h3>
+          <p>Create assignments with clear AI policies built in. Students know exactly what's expected. No more ambiguity.</p>
+          <span class="feature-tag">Three-Zone Framework</span>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+          </div>
+          <h3>Chat with Melissa</h3>
+          <p>Ask about teaching strategies, get help with difficult topics, brainstorm activities. Like having a colleague always ready to help.</p>
+          <span class="feature-tag">Always Available</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Guardrails Section -->
+  <section class="guardrails">
+    <div class="guardrails-container">
+      <div class="guardrails-text">
+        <span class="section-label" style="color: var(--gold);">Academic Integrity</span>
+        <h2>"But what about <span>cheating</span>?"</h2>
+        <p>
+          We get it. That's why Melissa was built by educators who literally wrote the book on AI in the classroom.
+        </p>
+        <p>
+          Every assignment you create includes the Three-Zone Framework — clear AI policies so students know exactly what's allowed, and verification questions to confirm genuine understanding.
+        </p>
+        <a href="#" class="guardrails-cta">
+          Learn about the Three-Zone Framework
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+      
+      <div class="zones-visual">
+        <div class="zone-item prohibited">
+          <div class="zone-badge">1</div>
+          <div class="zone-content">
+            <h4>AI Prohibited</h4>
+            <p>When the process IS the learning</p>
+          </div>
+        </div>
+        
+        <div class="zone-item assisted">
+          <div class="zone-badge">2</div>
+          <div class="zone-content">
+            <h4>AI Assisted</h4>
+            <p>AI can help, human thinking drives</p>
+          </div>
+        </div>
+        
+        <div class="zone-item independent">
+          <div class="zone-badge">3</div>
+          <div class="zone-content">
+            <h4>AI Required</h4>
+            <p>Teaching AI collaboration skills</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing" id="pricing">
+    <div class="pricing-container">
+      <span class="section-label">Simple Pricing</span>
+      <h2>One price. Everything included.</h2>
+      <p class="pricing-subtitle">Less than a coffee per week to get your weekends back.</p>
+      
+      <div class="pricing-cards">
+        <div class="pricing-card featured">
+          <p class="pricing-label">Individual Teacher</p>
+          <div class="pricing-price">
+            <strong>$99</strong>
+            <span>/year</span>
+          </div>
+          <ul class="pricing-features">
+            <li>Unlimited lesson plans</li>
+            <li>Unlimited materials</li>
+            <li>All export formats</li>
+            <li>Chat with Melissa</li>
+            <li>Standards alignment</li>
+          </ul>
+          <a href="https://app.melissaforeducators.ai/signup" class="btn-primary">
+            Start Free Trial
+          </a>
+        </div>
+        
+        <div class="pricing-card">
+          <p class="pricing-label">School / District</p>
+          <div class="pricing-price">
+            <strong>$3,500</strong>
+            <span>/year</span>
+          </div>
+          <ul class="pricing-features">
+            <li>Unlimited teachers</li>
+            <li>Admin dashboard</li>
+            <li>District-wide AI policies</li>
+            <li>Usage analytics</li>
+            <li>Priority support</li>
+          </ul>
+          <a href="mailto:hello@melissaforeducators.ai" class="btn-primary" style="background: var(--gray-900);">
+            Contact Us
+          </a>
+        </div>
+      </div>
+      
+      <p class="pricing-note">
+        All plans include a 7-day free trial. No credit card required.
+      </p>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta">
+    <div class="final-cta-container">
+      <h2>Ready to get your weekends back?</h2>
+      <p>
+        Join hundreds of teachers who are spending less time on paperwork and more time on what matters.
+      </p>
+      <a href="https://app.melissaforeducators.ai/signup" class="btn-primary">
+        Start Your Free Trial
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>Melissa</h3>
+          <p>
+            The AI teaching assistant that gives educators their time back. 
+            Built with care by Garden Prayer Publishing.
+          </p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Product</h4>
+          <ul class="footer-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="https://app.melissaforeducators.ai/login">Log In</a></li>
+            <li><a href="https://app.melissaforeducators.ai/signup">Sign Up</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="https://gardenprayerpublishing.com">Garden Prayer Publishing</a></li>
+            <li><a href="mailto:hello@melissaforeducators.ai">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Garden Prayer Publishing LLC. All rights reserved.</p>
+        <p>Built with ❤️ for educators</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+    
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+    
+    // Animate time savings on scroll
+    const timeCard = document.querySelector('.time-card');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    if (timeCard) {
+      timeCard.style.opacity = '0';
+      timeCard.style.transform = 'translateY(20px)';
+      timeCard.style.transition = 'all 0.6s ease';
+      observer.observe(timeCard);
+    }
+  </script>
+</body>
+</html>
