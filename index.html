@@ -321,11 +321,12 @@
 
     .time-after {
       font-weight: 800;
-      font-size: 1.1rem;
-      color: #FFB512;
-      background: rgba(255, 181, 18, 0.15);
-      padding: 0.25rem 0.75rem;
+      font-size: 1.15rem;
+      color: #1a1a1a;
+      background: linear-gradient(135deg, #FFB512 0%, #FFC847 100%);
+      padding: 0.35rem 0.85rem;
       border-radius: 100px;
+      box-shadow: 0 2px 8px rgba(255, 181, 18, 0.4);
     }
     
     .time-total {
@@ -691,18 +692,15 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      color: white;
+      color: var(--gold);
       font-weight: 600;
       text-decoration: none;
-      padding: 0.75rem 1.25rem;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 8px;
-      transition: background 0.2s;
+      transition: color 0.2s;
       width: fit-content;
     }
 
     .book-cta:hover {
-      background: rgba(255, 255, 255, 0.2);
+      color: var(--gold-light);
     }
 
     /* Pricing Section */
