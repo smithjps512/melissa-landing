@@ -308,19 +308,24 @@
     
     .time-before {
       text-align: right;
-      color: var(--gray-400);
+      color: #9CA3AF;
       font-size: 0.95rem;
       text-decoration: line-through;
+      opacity: 0.7;
     }
-    
+
     .time-arrow {
       color: var(--gold);
       font-weight: bold;
     }
-    
+
     .time-after {
-      font-weight: 700;
-      color: var(--green);
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: #FFB512;
+      background: rgba(255, 181, 18, 0.15);
+      padding: 0.25rem 0.75rem;
+      border-radius: 100px;
     }
     
     .time-total {
@@ -639,12 +644,67 @@
       font-weight: 600;
       margin-bottom: 0.25rem;
     }
-    
+
     .zone-content p {
       font-size: 0.9rem;
       opacity: 0.8;
     }
-    
+
+    .guardrails-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .book-feature {
+      text-align: center;
+    }
+
+    .book-cover {
+      width: 180px;
+      height: auto;
+      border-radius: 4px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .book-cover:hover {
+      transform: translateY(-4px) rotate(-2deg);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .book-tagline {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--gold-light);
+      font-style: italic;
+    }
+
+    .guardrails-ctas {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .book-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 0.75rem 1.25rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      transition: background 0.2s;
+      width: fit-content;
+    }
+
+    .book-cta:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
     /* Pricing Section */
     .pricing {
       padding: 6rem 2rem;
@@ -823,7 +883,7 @@
     
     .footer-top {
       display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
       gap: 4rem;
       margin-bottom: 3rem;
     }
@@ -915,13 +975,21 @@
       .guardrails-container {
         grid-template-columns: 1fr;
       }
-      
+
+      .book-feature {
+        order: -1;
+      }
+
+      .book-cover {
+        width: 140px;
+      }
+
       .pricing-cards {
         grid-template-columns: 1fr;
       }
-      
+
       .footer-top {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 2rem;
       }
       
@@ -940,18 +1008,22 @@
       .hero {
         padding: 6rem 1.5rem 3rem;
       }
-      
+
       .hero h1 {
         font-size: 2rem;
       }
-      
+
       .hero-cta-group {
         flex-direction: column;
       }
-      
+
       .btn-primary, .btn-secondary {
         width: 100%;
         justify-content: center;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -1133,41 +1205,61 @@
         <span class="section-label" style="color: var(--gold);">Academic Integrity</span>
         <h2>"But what about <span>cheating</span>?"</h2>
         <p>
-          We get it. That's why Melissa was built by educators who literally wrote the book on AI in the classroom.
+          Great question. That's why Melissa was built by the author of
+          <em>Stop Banning What You Should Be Teaching</em> — the educator's
+          handbook for navigating AI in the classroom.
         </p>
         <p>
-          Every assignment you create includes the Three-Zone Framework — clear AI policies so students know exactly what's allowed, and verification questions to confirm genuine understanding.
+          The Three-Zone Framework gives every assignment clear AI policies
+          that students actually understand and follow. No more ambiguity.
+          No more guessing.
         </p>
-        <a href="#" class="guardrails-cta">
-          Learn about the Three-Zone Framework
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </a>
+        <div class="guardrails-ctas">
+          <a href="#" class="guardrails-cta">
+            Learn about the Three-Zone Framework
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="https://www.amazon.com/dp/B0GJJ3MPG3" target="_blank" rel="noopener" class="book-cta">
+            Get the Book on Amazon
+          </a>
+        </div>
       </div>
-      
-      <div class="zones-visual">
-        <div class="zone-item prohibited">
-          <div class="zone-badge">1</div>
-          <div class="zone-content">
-            <h4>AI Prohibited</h4>
-            <p>When the process IS the learning</p>
-          </div>
+
+      <div class="guardrails-visual">
+        <!-- Book Cover -->
+        <div class="book-feature">
+          <a href="https://www.amazon.com/dp/B0GJJ3MPG3" target="_blank" rel="noopener">
+            <img src="/images/book-cover.jpg" alt="Stop Banning What You Should Be Teaching - Book Cover" class="book-cover">
+          </a>
+          <p class="book-tagline">The framework behind Melissa</p>
         </div>
-        
-        <div class="zone-item assisted">
-          <div class="zone-badge">2</div>
-          <div class="zone-content">
-            <h4>AI Assisted</h4>
-            <p>AI can help, human thinking drives</p>
+
+        <!-- Three Zones -->
+        <div class="zones-visual">
+          <div class="zone-item prohibited">
+            <div class="zone-badge">1</div>
+            <div class="zone-content">
+              <h4>AI Prohibited</h4>
+              <p>When the process IS the learning</p>
+            </div>
           </div>
-        </div>
-        
-        <div class="zone-item independent">
-          <div class="zone-badge">3</div>
-          <div class="zone-content">
-            <h4>AI Required</h4>
-            <p>Teaching AI collaboration skills</p>
+
+          <div class="zone-item assisted">
+            <div class="zone-badge">2</div>
+            <div class="zone-content">
+              <h4>AI Assisted</h4>
+              <p>AI can help, human thinking drives</p>
+            </div>
+          </div>
+
+          <div class="zone-item independent">
+            <div class="zone-badge">3</div>
+            <div class="zone-content">
+              <h4>AI Required</h4>
+              <p>Teaching AI collaboration skills</p>
+            </div>
           </div>
         </div>
       </div>
@@ -1263,6 +1355,14 @@
           </ul>
         </div>
         
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.amazon.com/dp/B0GJJ3MPG3" target="_blank" rel="noopener">The Book</a></li>
+            <li><a href="#">Three-Zone Framework</a></li>
+          </ul>
+        </div>
+
         <div class="footer-section">
           <h4>Company</h4>
           <ul class="footer-links">
