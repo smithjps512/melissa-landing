@@ -65,13 +65,12 @@ don't promise uniqueness or factual accuracy.
 
 ## 3. Pricing & payments to reflect
 
-- **Melissa Pro: $149/year** (annual). A **$99/year founding price** exists for
-  early adopters and is **grandfathered** (a founding subscriber keeps $99 on
-  renewal; `is_founding_member` is permanent).
-  - **OWNER DECISION TO CONFIRM before the page ships:** advertise **$149 now**,
-    or keep marketing the **$99 founding** price for a window? The owner has
-    leaned toward **$149 now**. Confirm, and price the page to match whatever
-    `STRIPE_PRICE_YEARLY` is set to in production.
+- **Melissa Pro: $149/year** (annual). **DECIDED:** the page advertises **$149
+  now**. The price was set at $149 to cover the cost of image generation; there
+  is no active $99 founding window to market. Early founding subscribers who
+  joined at $99 keep $99 permanently (`is_founding_member` is permanent), but
+  that is a fact about the existing cohort, not an offer for new signups. Keep
+  the page price in sync with production `STRIPE_PRICE_YEARLY`.
 - **Checkout is Stripe.** No trials anywhere in copy or flow.
 - **Promo codes** exist (`BETATESTER` / `FOUNDERS100` grant complimentary Pro) —
   see `docs/promo-codes.md`. Coordinate any launch promo with the owner.
@@ -124,9 +123,9 @@ Reference docs (in the app repo, all current):
 
 ## 7. Open decisions for the owner before the site goes public
 
-1. **$149 now vs. hold the $99 founding window** (§3). Set the page price to match production Stripe.
+1. ~~**$149 now vs. hold the $99 founding window**~~ **RESOLVED: $149 now** (§3). Price set at $149 for image-generation cost; no $99 founding window is marketed. Keep the page price matched to production Stripe.
 2. **Tier display name** — "Melissa Pro" vs "Teacher Pro" (settle in `melissa-2.0-tier-contract.md`, then both repos use it).
-3. **Launch promo** (if any), and whether to feature founding pricing.
+3. **Launch promo** (if any). Do not feature $99 founding pricing.
 4. **Sweepstakes / entry mechanic** (if used) — the trial-based entry is gone; confirm the replacement with counsel (spec §10.3).
 
 ---
