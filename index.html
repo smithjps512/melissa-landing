@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Melissa for Educators | Get Your Weekends Back</title>
-  <meta name="description" content="Melissa creates your lesson plans, worksheets, and materials in minutes — so you can focus on actually teaching. Save 8+ hours every week.">
-  
+  <meta name="description" content="Melissa creates your lesson plans, worksheets, quizzes, puzzles, and presentations with real images. Free forever, no credit card.">
+
   <!-- Open Graph -->
   <meta property="og:title" content="Melissa for Educators | Get Your Weekends Back">
-  <meta property="og:description" content="AI teaching assistant that creates lesson plans in 5 minutes, worksheets in 2 minutes, and gives you 8+ hours back every week.">
+  <meta property="og:description" content="The AI teaching assistant that builds complete presentations with real images, plus lessons, worksheets, quizzes, and print-ready puzzles. Free forever, no credit card.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://melissaforeducators.ai">
   
@@ -710,7 +710,7 @@
     }
     
     .pricing-container {
-      max-width: 900px;
+      max-width: 1100px;
       margin: 0 auto;
       text-align: center;
     }
@@ -731,18 +731,35 @@
     
     .pricing-cards {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
       margin-bottom: 2rem;
+      align-items: start;
     }
-    
+
     .pricing-card {
       background: var(--gray-50);
       border-radius: 16px;
-      padding: 2.5rem;
+      padding: 2.5rem 2rem;
       text-align: left;
       position: relative;
       transition: all 0.3s ease;
+    }
+
+    .pricing-badge {
+      position: absolute;
+      top: -0.75rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: var(--maroon);
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.3rem 0.85rem;
+      border-radius: 100px;
+      white-space: nowrap;
     }
     
     .pricing-card:hover {
@@ -1464,6 +1481,164 @@
         font-size: 2rem;
       }
     }
+
+    /* ============================================================ */
+    /* IMAGES SECTION: "AI images, made safe for K-12"               */
+    /* ============================================================ */
+
+    .images {
+      padding: 6rem 2rem;
+      background: var(--gold-pale);
+    }
+
+    .images-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .images-text h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .images-text h2 span {
+      color: var(--maroon);
+    }
+
+    .images-text p {
+      font-size: 1.1rem;
+      color: var(--gray-600);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .images-types {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .image-type {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .image-type-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--maroon);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+
+    .image-type-text strong {
+      display: block;
+      color: var(--gray-900);
+      margin-bottom: 0.15rem;
+    }
+
+    .image-type-text p {
+      font-size: 0.95rem;
+      color: var(--gray-600);
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+
+    .image-type-text .pro-pill {
+      display: inline-block;
+      background: var(--maroon);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.15rem 0.5rem;
+      border-radius: 100px;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+
+    .safety-card {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 40px rgba(107, 26, 26, 0.1);
+    }
+
+    .safety-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--gray-900);
+      margin-bottom: 0.5rem;
+    }
+
+    .safety-card > p {
+      font-size: 0.95rem;
+      color: var(--gray-600);
+      margin-bottom: 1.5rem;
+    }
+
+    .safety-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .safety-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      color: var(--gray-700);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .safety-check {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--green-light);
+      color: var(--green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .safety-note {
+      margin-top: 1.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--gray-100);
+      font-size: 0.85rem;
+      color: var(--gray-500);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 900px) {
+      .images-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1476,7 +1651,7 @@
         <li><a href="#why-melissa">Why Melissa</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="https://app.melissaforeducators.ai/login">Log In</a></li>
-        <li><a href="https://app.melissaforeducators.ai/signup" class="nav-cta">Start Free Trial</a></li>
+        <li><a href="https://app.melissaforeducators.ai/signup" class="nav-cta">Start free</a></li>
       </ul>
     </nav>
   </header>
@@ -1489,30 +1664,30 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
           </svg>
-          Now in Beta — Join 500+ Teachers
+          New: Melissa builds your slides, with real images
         </div>
-        
+
         <h1>What if lesson planning took <span>5 minutes</span> instead of 50?</h1>
-        
+
         <p class="hero-subtitle">
-          Melissa creates your lesson plans, worksheets, and materials — 
-          so you can focus on actually teaching.
+          Melissa creates your lessons, worksheets, quizzes, puzzles, and
+          presentations with real images, so you can focus on actually teaching.
         </p>
-        
+
         <div class="hero-cta-group">
           <a href="https://app.melissaforeducators.ai/signup" class="btn-primary">
-            Start Free Trial
+            Start free
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
           </a>
           <a href="#features" class="btn-secondary">
-            See How It Works
+            See what's included
           </a>
         </div>
-        
+
         <p class="hero-note">
-          <strong>Free for 7 days.</strong> No credit card required.
+          <strong>Free forever.</strong> No credit card required.
         </p>
       </div>
       
@@ -1592,47 +1767,119 @@
   <section class="features" id="features">
     <div class="features-container">
       <div class="features-header">
-        <span class="section-label">What Melissa Does</span>
+        <span class="section-label">What Melissa does</span>
         <h2>Everything you need. Nothing you don't.</h2>
         <p class="features-subtitle">Built by educators who understand how teaching actually works.</p>
       </div>
-      
+
       <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H6a2 2 0 01-2-2V5z"/><path d="M8 21h8M12 17v4"/><path d="M8 9l2.5 2.5L14 8l2 2"/></svg>
+          </div>
+          <h3>Presentations with real images</h3>
+          <p>Melissa drafts an outline you approve, then builds the slides with real images, not empty placeholders: charts and diagrams drawn from your lesson, and licensed photos with credit attached.</p>
+          <span class="feature-tag">The headline upgrade</span>
+        </div>
+
         <div class="feature-card">
           <div class="feature-icon">
             <svg viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
           </div>
-          <h3>Lesson Plans in Minutes</h3>
-          <p>Tell Melissa what you're teaching. Get a complete lesson — hook, instruction, activities, closure — aligned to your state standards.</p>
-          <span class="feature-tag">Standards-Aligned</span>
+          <h3>Lessons in minutes</h3>
+          <p>Tell Melissa what you're teaching. Get a complete lesson, hook, instruction, activities, closure, with standards alignment on every one.</p>
+          <span class="feature-tag">Standards aligned</span>
         </div>
-        
+
         <div class="feature-card">
           <div class="feature-icon">
             <svg viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
           </div>
-          <h3>One-Click Materials</h3>
-          <p>Generate worksheets, handouts, exit tickets, and study guides instantly. Export to PDF or Word — ready to print or share.</p>
-          <span class="feature-tag">Print-Ready</span>
+          <h3>Worksheets and materials</h3>
+          <p>Generate worksheets, handouts, exit tickets, and study guides instantly. PDF and PowerPoint download, print ready.</p>
+          <span class="feature-tag">Print ready</span>
         </div>
-        
+
         <div class="feature-card">
           <div class="feature-icon">
             <svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
           </div>
-          <h3>Smart Assignments</h3>
-          <p>Create assignments with clear AI policies built in. Students know exactly what's expected. No more ambiguity.</p>
-          <span class="feature-tag">Three-Zone Framework</span>
+          <h3>Quizzes and assessments</h3>
+          <p>Build quizzes and assessments in a click, with separate answer keys. Unlimited, on every plan.</p>
+          <span class="feature-tag">With answer keys</span>
         </div>
-        
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 4v16"/></svg>
+          </div>
+          <h3>Print-ready puzzles</h3>
+          <p>Crossword, word search, vocabulary matching, fill-in-the-blank, bingo with a unique card per student, and card sort. Clean black-and-white printing with separate answer keys. Free and unlimited.</p>
+          <span class="feature-tag">Free and unlimited</span>
+        </div>
+
         <div class="feature-card">
           <div class="feature-icon">
             <svg viewBox="0 0 24 24"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
           </div>
           <h3>Chat with Melissa</h3>
           <p>Ask about teaching strategies, get help with difficult topics, brainstorm activities. Like having a colleague always ready to help.</p>
-          <span class="feature-tag">Always Available</span>
+          <span class="feature-tag">Always available</span>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Images Section: "AI images, made safe for K-12" -->
+  <section class="images" id="images">
+    <div class="images-container">
+      <div class="images-text">
+        <span class="section-label">The differentiator</span>
+        <h2>Melissa doesn't mark where a picture should go. <span>She creates and places it.</span></h2>
+        <p>
+          Most AI tools leave you empty placeholders. Melissa builds accurate
+          charts and diagrams from your lesson, adds licensed photos with credit,
+          and, on Pro, creates classroom-ready illustrations.
+        </p>
+        <div class="images-types">
+          <div class="image-type">
+            <div class="image-type-icon">📊</div>
+            <div class="image-type-text">
+              <strong>Charts and diagrams</strong>
+              <p>Drawn deterministically from your content, so labels are accurate and never hallucinated.</p>
+            </div>
+          </div>
+          <div class="image-type">
+            <div class="image-type-icon">📷</div>
+            <div class="image-type-text">
+              <strong>Licensed stock photos</strong>
+              <p>Real photography from Pexels, with credit attached automatically. Included free.</p>
+            </div>
+          </div>
+          <div class="image-type">
+            <div class="image-type-icon">🎨</div>
+            <div class="image-type-text">
+              <strong>Custom AI illustrations<span class="pro-pill">Pro</span></strong>
+              <p>Safe, classroom-ready illustrations generated on demand. The visible Pro unlock.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="safety-card">
+        <h3>Made safe for K-12</h3>
+        <p>The guardrails are the point, not the fine print. Every generated image follows these rules:</p>
+        <ul class="safety-list">
+          <li><span class="safety-check">✓</span> No readable text baked into generated images.</li>
+          <li><span class="safety-check">✓</span> No real or identifiable people.</li>
+          <li><span class="safety-check">✓</span> No human figures by default.</li>
+          <li><span class="safety-check">✓</span> Requests that conflict with safety are declined.</li>
+        </ul>
+        <p class="safety-note">
+          Image generation is powered by OpenAI and reviewed by counsel. Generated
+          images are illustrative, so teachers should review them before use. We
+          don't promise uniqueness or factual accuracy.
+        </p>
       </div>
     </div>
   </section>
@@ -1873,12 +2120,12 @@
         <div class="tia-roi-inner">
           <div class="tia-roi-left">
             <p class="tia-roi-label">Your investment</p>
-            <p class="tia-roi-price">$99<span>/year</span></p>
+            <p class="tia-roi-price">$149<span>/year</span></p>
           </div>
           <div class="tia-roi-arrow">→</div>
           <div class="tia-roi-right">
             <p class="tia-roi-label">Your potential return</p>
-            <p class="tia-roi-return">30x – 320x</p>
+            <p class="tia-roi-return">20x – 215x</p>
           </div>
         </div>
         <a href="#pricing" class="btn-primary" style="background: var(--gold); color: var(--maroon); margin-top: 1.5rem;">
@@ -1894,50 +2141,81 @@
   <!-- Pricing Section -->
   <section class="pricing" id="pricing">
     <div class="pricing-container">
-      <span class="section-label">Simple Pricing</span>
-      <h2>One price. Everything included.</h2>
-      <p class="pricing-subtitle">Less than a coffee per week to get your weekends back.</p>
-      
+      <span class="section-label">Simple pricing</span>
+      <h2>Free forever. Upgrade when you're ready.</h2>
+      <p class="pricing-subtitle">No trial, no credit card to start. Annual billing on paid plans.</p>
+
       <div class="pricing-cards">
-        <div class="pricing-card featured">
-          <p class="pricing-label">Individual Teacher</p>
+        <div class="pricing-card">
+          <p class="pricing-label">Melissa Free</p>
           <div class="pricing-price">
-            <strong>$99</strong>
-            <span>/year</span>
+            <strong>$0</strong>
+            <span>forever</span>
           </div>
           <ul class="pricing-features">
             <li>Unlimited lesson plans</li>
-            <li>Unlimited materials</li>
-            <li>All export formats</li>
+            <li>Unlimited worksheets, handouts, and materials</li>
+            <li>Unlimited quizzes and assessments</li>
+            <li>Unlimited puzzles and classroom games</li>
             <li>Chat with Melissa</li>
-            <li>Standards alignment</li>
+            <li>Standards alignment on every lesson</li>
+            <li>5 presentations per month</li>
+            <li>Charts, diagrams, and photography included in presentations</li>
+            <li>PDF and PowerPoint download, print ready</li>
+          </ul>
+          <a href="https://app.melissaforeducators.ai/signup" class="btn-primary" style="background: var(--gray-900);">
+            Start free
+          </a>
+          <p class="pricing-note" style="text-align: left; margin-top: 1rem;">
+            Presentations are the most expensive thing Melissa creates, so free
+            accounts get five each month. Even at the cap you still get the
+            outline, slide text, and speaker notes. Nothing is lost.
+          </p>
+        </div>
+
+        <div class="pricing-card featured">
+          <span class="pricing-badge">Most popular</span>
+          <p class="pricing-label">Melissa Pro</p>
+          <div class="pricing-price">
+            <strong>$149</strong>
+            <span>/year</span>
+          </div>
+          <ul class="pricing-features">
+            <li>Everything in Free</li>
+            <li>Unlimited presentations</li>
+            <li>AI generated illustrations</li>
+            <li>No Melissa footer</li>
+            <li>Export to Google Slides, Google Docs, and OneDrive</li>
+            <li>Per slide image control and regeneration</li>
+            <li>Priority generation</li>
           </ul>
           <a href="https://app.melissaforeducators.ai/signup" class="btn-primary">
-            Start Free Trial
+            Get Melissa Pro
           </a>
         </div>
-        
+
         <div class="pricing-card">
-          <p class="pricing-label">School / District</p>
+          <p class="pricing-label">Melissa for Schools</p>
           <div class="pricing-price">
             <strong>$3,500</strong>
             <span>/year</span>
           </div>
           <ul class="pricing-features">
-            <li>Unlimited teachers</li>
-            <li>Admin dashboard</li>
-            <li>District-wide AI policies</li>
-            <li>Usage analytics</li>
+            <li>Everything in Pro for every teacher</li>
+            <li>Standards coverage documentation and reporting</li>
+            <li>Admin dashboard and usage analytics</li>
+            <li>District AI policy controls</li>
             <li>Priority support</li>
           </ul>
           <a href="mailto:hello@melissaforeducators.ai" class="btn-primary" style="background: var(--gray-900);">
-            Contact Us
+            Contact us
           </a>
         </div>
       </div>
-      
+
       <p class="pricing-note">
-        All plans include a 7-day free trial. No credit card required.
+        Free is a real plan, not a sample. No free trial anywhere, because Free
+        never expires.
       </p>
     </div>
   </section>
@@ -1950,7 +2228,7 @@
         Join hundreds of teachers who are spending less time on paperwork and more time on what matters.
       </p>
       <a href="https://app.melissaforeducators.ai/signup" class="btn-primary">
-        Start Your Free Trial
+        Start free
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M5 12h14M12 5l7 7-7 7"/>
         </svg>
@@ -1993,6 +2271,8 @@
           <ul class="footer-links">
             <li><a href="https://gardenprayerpublishing.com">Garden Prayer Publishing</a></li>
             <li><a href="mailto:hello@melissaforeducators.ai">Contact</a></li>
+            <li><a href="https://app.melissaforeducators.ai/terms">Terms</a></li>
+            <li><a href="https://app.melissaforeducators.ai/privacy">Privacy</a></li>
           </ul>
         </div>
       </div>

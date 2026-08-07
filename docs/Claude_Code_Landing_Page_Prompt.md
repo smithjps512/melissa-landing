@@ -58,9 +58,9 @@ This section includes:
   - 🎯 Differentiation Documentation
   - 📄 One-Click Export
 - ROI calculator box:
-  - Left: "$99/year" (your investment)
+  - Left: "$149/year" (your investment)
   - Arrow: "→" in gold
-  - Right: "30x – 320x" in gold (your potential return)
+  - Right: "20x – 215x" in gold (your potential return)
 - CTA button: "See Pricing" with gold background and maroon text
 
 ---

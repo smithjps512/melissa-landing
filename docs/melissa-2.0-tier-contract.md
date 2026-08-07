@@ -27,15 +27,15 @@ Both repos must use the same display strings. Never write "Free plan" in one pla
 
 ## Prices
 
-| Tier | Launch price | Post transition price |
-|---|---|---|
-| Melissa Free | $0 | $0 |
-| Melissa Pro | $99 per year | $149 per year |
-| Melissa for Schools | $3,500 per year | $3,500 per year |
+| Tier | Price |
+|---|---|
+| Melissa Free | $0 |
+| Melissa Pro | $149 per year |
+| Melissa for Schools | $3,500 per year |
 
-**Founding window.** $99 holds through back to school and ends when the 2.1 semester planner ships. Marketing may describe $99 as a founding teacher price that ends when semester planning launches. This is a real deadline, not a manufactured one, and copy should not imply otherwise.
+Melissa Pro is $149 per year. The price was set at $149 to cover the cost of image generation. There is no active $99 founding window, and marketing must not advertise one.
 
-**Grandfathering.** Every subscriber at $99 keeps $99 permanently. Marketing may state this plainly. It is a genuine trust signal and it is true.
+**Grandfathering.** Early founding subscribers who joined at $99 keep $99 permanently (`is_founding_member` is permanent). This is a true statement about that existing cohort only. It is not an offer available to new signups, and the public site must not market a $99 price.
 
 No monthly billing option. Annual only. Teachers churn in June and return in August, and monthly makes that trivially easy.
 
