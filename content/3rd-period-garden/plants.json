@@ -1,0 +1,254 @@
+{
+  "collection": "3rd Period Garden — FarmBot Plant Showcase",
+  "privacy": "No student names appear in this file or on the site. Source files are referenced by Drive filename only.",
+  "sourceFolder": "Google Drive / 3rd period flower Website",
+  "plants": [
+    {
+      "id": "rhododendron",
+      "commonName": "Rhododendron",
+      "botanicalName": "Rhododendron spp.",
+      "sources": {
+        "info": "IMG_7348.JPG",
+        "care": "IMG_7348.JPG",
+        "format": "handwritten"
+      },
+      "note": "Single handwritten page covering Facts, Care, and History plus a picture area. Needs splitting across the two site pages, or a second page from the student.",
+      "info": [
+        "Rhododendrons are popular, colorful spring flowers, famous for their beautiful blooms.",
+        "They are low maintenance.",
+        "Rhododendrons are evergreen or deciduous shrubs.",
+        "They get big — up to 20 feet tall and 15 feet wide.",
+        "They are toxic to humans, pets, and livestock."
+      ],
+      "history": [
+        "Rhododendrons date back over 55 million years.",
+        "Their recorded human history spans ancient honey mishaps and 19th-century plant hunting."
+      ],
+      "care": []
+    },
+    {
+      "id": "blue-wild-indigo",
+      "commonName": "Blue Wild Indigo",
+      "botanicalName": "Baptisia australis",
+      "sources": {
+        "info": "IMG_7350.JPG",
+        "care": "Blue Wild Indigo.docx",
+        "format": "handwritten + word document"
+      },
+      "info": [
+        "Showy in pollinator gardens.",
+        "Blooms blue in late spring.",
+        "Has a shrubby appearance — forms a bushy mound with blue-green, clover-like leaves.",
+        "Host plant for six butterfly species, including the wild indigo duskywing.",
+        "Attractive black seed pods that rattle in the wind.",
+        "Named \"false indigo\" because colonial settlers used it to make a blue dye that was weaker than true indigo.",
+        "Fixes nitrogen in the soil — it belongs to the pea family."
+      ],
+      "fastFacts": {
+        "Plant type": "Herbaceous perennial",
+        "Bloom time": "Late spring to early summer (May–June)",
+        "Mature size": "3 to 4 feet tall and wide",
+        "Hardiness zones": "3–9",
+        "Sun": "Full sun",
+        "Soil": "Dry to medium moisture, well-draining"
+      },
+      "care": [
+        "Flowers best in full sun.",
+        "Can take several years to reach full height — 3 to 4 years to reach full size.",
+        "Deep taproot makes it drought tolerant over time, and deer resistant once established.",
+        "Choose the permanent spot carefully — the long taproot means it dislikes being moved.",
+        "From seed, the hard seed coat needs scarification (sandpaper or an overnight warm-water soak).",
+        "Almost no maintenance once established. Stems die back to the ground in winter."
+      ],
+      "warning": "Contains toxic alkaloids — do not eat any part of this plant."
+    },
+    {
+      "id": "tickseed",
+      "commonName": "Tickseed",
+      "botanicalName": "Coreopsis",
+      "sources": {
+        "info": "IMG_7351.JPG",
+        "care": "IMG_7352.JPG",
+        "format": "handwritten"
+      },
+      "info": [
+        "A yellow, daisy-like flower.",
+        "It attracts bees, butterflies, and other pollinators.",
+        "The tickseed is a low-maintenance wildflower.",
+        "Why is it called \"tickseed\"? The name comes from the flower's seeds — they look like ticks. But the tickseed does not attract ticks."
+      ],
+      "care": [
+        "Sunlight: at least 6 to 8 hours of direct sun for the best blooms.",
+        "Soil: well-drained, lean, or sandy. It tolerates poor soil.",
+        "Water: an adult tickseed needs only about one inch of water a week. Seedlings need consistent watering until their roots take hold.",
+        "Height depends on the variety — a regular tickseed is around 3 feet, a dwarf can be as short as 8 inches, and a tall one can grow taller still."
+      ]
+    },
+    {
+      "id": "black-eyed-susan",
+      "commonName": "Black-Eyed Susan",
+      "botanicalName": "Rudbeckia hirta",
+      "sources": {
+        "info": "IMG_7353.JPG",
+        "care": "IMG_7354.JPG",
+        "format": "handwritten"
+      },
+      "info": [
+        "Height: 1 to 4 feet tall.",
+        "Foliage: leaves are rough and hairy, growing up to six inches.",
+        "Plant type depends on how it is treated — that determines how long it will live.",
+        "It self-seeds.",
+        "Highly drought tolerant and adaptable.",
+        "Thrives in sun."
+      ],
+      "care": [
+        "Plant them in full sun so they get at least six hours of sun.",
+        "Use loose, well-draining soil — they dislike sitting in soggy soil.",
+        "Water plants regularly during the growing season."
+      ]
+    },
+    {
+      "id": "woodland-strawberry",
+      "commonName": "Woodland Strawberry",
+      "botanicalName": "Fragaria vesca",
+      "sources": {
+        "info": "IMG_7355.JPG",
+        "care": null,
+        "format": "handwritten"
+      },
+      "note": "No care page identified yet. IMG_7349.JPG may be it — see INVENTORY.md open questions.",
+      "info": [
+        "The woodland strawberry (Fragaria vesca) is a flower in the rose family.",
+        "It occurs naturally across the Northern Hemisphere.",
+        "It is also known as the wild strawberry and the wood strawberry.",
+        "It has dark green leaves and bright red fruits.",
+        "The fruits are small yet flavorful."
+      ],
+      "care": []
+    },
+    {
+      "id": "virginia-spiderwort",
+      "commonName": "Virginia Spiderwort",
+      "botanicalName": "Tradescantia virginiana",
+      "sources": {
+        "info": "IMG_7356.JPG",
+        "care": "IMG_7357.JPG",
+        "format": "handwritten"
+      },
+      "note": "Care page (IMG_7357) is unlabeled — matched by photo sequence and content. Please confirm.",
+      "info": [
+        "Virginia spiderwort is edible, but parts of it are poisonous.",
+        "The flowers come in three colors: blue, pink, or white.",
+        "They grow and thrive in moist woods, stream banks, clearings, and roadsides.",
+        "Spiderwort is native to the eastern and east-central regions of North America."
+      ],
+      "care": [
+        "Water: keep the soil moist, and water deeply if it is dry — about 1 inch per week.",
+        "Avoid soggy soil. Make sure the plant drains well.",
+        "Give it partial shade, about 4 to 6 hours a day.",
+        "Good drainage matters.",
+        "If the soil is healthy, fertilizer will rarely be needed.",
+        "Prune to prevent a floppy look."
+      ]
+    },
+    {
+      "id": "threadleaf-coreopsis",
+      "commonName": "Threadleaf Coreopsis",
+      "botanicalName": "Coreopsis verticillata",
+      "sources": {
+        "info": "IMG_7358.JPG",
+        "care": "IMG_7359.JPG",
+        "format": "handwritten"
+      },
+      "note": "IMG_7358 includes the student's own drawing of the plant.",
+      "info": [
+        "It handles extreme summer heat, drought, and even road salt with ease once established.",
+        "It won Plant of the Year in 1992 from the Perennial Plant Association.",
+        "It is native to the southern USA — states such as Florida and Texas."
+      ],
+      "care": [
+        "Low maintenance.",
+        "Thrives best in full sun, 6 to 8 hours every day.",
+        "Handles poor, rocky, or sandy soil.",
+        "1 inch of water every week.",
+        "Little to no fertilizer needed.",
+        "Needs good soil drainage.",
+        "Wet or soggy soil harms the plant. Water regularly until the roots take hold."
+      ]
+    },
+    {
+      "id": "sunchoke",
+      "commonName": "Sunchoke (Jerusalem Artichoke)",
+      "botanicalName": "Helianthus tuberosus",
+      "sources": {
+        "info": "plant care.docx (sunchokes)",
+        "care": "plant care.docx (sunchokes)",
+        "format": "word document"
+      },
+      "note": "The Drive filename for this document starts with a student's name — please rename it in Drive.",
+      "info": [
+        "Sunchokes are resilient, high-yielding perennial sunflowers native to North America.",
+        "The above-ground plant looks like a wild sunflower and easily grows 6 to 14 feet tall — tall enough to shade nearby crops.",
+        "They spread rapidly through underground rhizomes. Any tiny piece of tuber left in the soil grows into a new plant next spring.",
+        "The edible parts are the knobby underground tubers, which look like ginger root. One plant can yield over a gallon of tubers.",
+        "They need a long season — 120 to 150 days — and bloom bright yellow late, in August or September.",
+        "They store energy as inulin, not starch. Gut bacteria love it, which is why sunchokes are famous for causing gas.",
+        "Frost makes them sweeter: it breaks inulin down into fructose for a nuttier flavor.",
+        "Raw, they are crisp and sweet like water chestnuts. Cooked, they turn creamy like a potato."
+      ],
+      "care": [
+        "Plant in a 5- to 15-gallon container or heavy grow bag — never straight into a greenhouse bed, or they will take over.",
+        "Use a loose, well-draining mix of potting soil, compost, and a little sand or perlite.",
+        "Plant tubers 3 to 5 inches deep with the eyes facing up, spaced about 12 inches apart.",
+        "Water thoroughly after planting, then mulch 3 inches deep with straw or leaves.",
+        "Fall: keep the greenhouse ventilated. They like 65–90°F. Water when the top 2 inches are dry — never waterlogged.",
+        "Winter: do not heat the greenhouse. They need a real chill to break dormancy and sweeten. Water the bare minimum.",
+        "Late winter: as daylight grows, shoots appear. Increase watering once they do.",
+        "Spring: after the last frost, move containers outside to full sun — they will outgrow the greenhouse ceiling."
+      ]
+    },
+    {
+      "id": "new-england-aster",
+      "commonName": "New England Aster",
+      "botanicalName": "Symphyotrichum novae-angliae",
+      "sources": {
+        "info": "New England aster.docx",
+        "care": "New England aster.docx",
+        "format": "word document"
+      },
+      "note": "The Drive filename for this document starts with a student's name — please rename it in Drive. The student wrote \"room temperature\" for hardiness zones; corrected to 4–8 on the page — revert if you would rather show their answer.",
+      "fastFacts": {
+        "Native range": "Central and eastern North America",
+        "Plant type": "Herbaceous perennial",
+        "Mature size": "2 to 6 feet tall, 1 to 3 feet wide",
+        "Bloom time": "Late summer through October, until the first hard frost",
+        "Flower color": "Purple, pink, lavender, or white with orange-yellow centers",
+        "Hardiness zones": "Zones 4–8"
+      },
+      "info": [
+        "Formerly known as Aster novae-angliae.",
+        "It blooms late — one of the last big nectar sources before frost.",
+        "It needs at least 6 to 8 hours of direct sunlight each day to grow and bloom its best."
+      ],
+      "care": [
+        "Sunlight: prefers full sun, though it tolerates light partial shade.",
+        "Soil: adapts to clay, loam, or sandy soil, but prefers rich, moist, well-draining conditions.",
+        "Water: needs medium to moist soil. It tolerates short dry spells once established.",
+        "Pinch back the stems 1 to 2 inches in late spring so the plant grows bushier and is less likely to flop over.",
+        "Plant it behind shorter perennials — the lower leaves brown and drop by flowering time.",
+        "Space plants 1 to 2 feet apart for airflow, to prevent fungal leaf diseases.",
+        "Divide large clumps every 2 to 3 years in spring to keep the plant vigorous."
+      ]
+    }
+  ],
+  "unresolved": [
+    {
+      "file": "IMG_7349.JPG",
+      "issue": "No readable text could be extracted. Could be a plant photo, a drawing-only page, or an out-of-focus shot. Needs a human look."
+    },
+    {
+      "file": "IMG_7360.JPG",
+      "issue": "Not a plant assignment. It is a handwritten user-story page about a workout/fitness app. Appears to have been photographed into this folder by mistake."
+    }
+  ]
+}
