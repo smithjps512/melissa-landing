@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Melissa for Educators | Get Your Weekends Back</title>
-  <meta name="description" content="Melissa creates your lesson plans, worksheets, quizzes, puzzles, and presentations with real images. Free forever, no credit card.">
+  <title>Melissa for Teachers | Your Year, Ready Before School Starts</title>
+  <meta name="description" content="Melissa for Teachers gets your year ready before school starts, aligned to your state's standards, plus slides with real images, worksheets, puzzles, classroom games and Class Pulse. Free forever, no credit card.">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Melissa for Educators | Get Your Weekends Back">
@@ -969,6 +969,148 @@
       color: white;
     }
     
+
+    /* Prepared year */
+    .year {
+      padding: 6rem 2rem;
+      background: white;
+    }
+
+    .year-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .year-copy h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.6vw, 2.5rem);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .year-copy h2 span { color: var(--maroon); }
+
+    .year-copy p {
+      font-size: 1.1rem;
+      color: var(--gray-600);
+    }
+
+    .year-copy .year-note {
+      margin-top: 1.25rem;
+      font-size: 0.95rem;
+      color: var(--maroon);
+      font-weight: 500;
+    }
+
+    .year-choices {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .year-choice {
+      background: var(--cream);
+      border: 1px solid var(--gray-200);
+      border-left: 4px solid var(--gold);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+    }
+
+    .year-choice h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--maroon);
+      margin-bottom: 0.25rem;
+    }
+
+    .year-choice p {
+      color: var(--gray-600);
+      font-size: 0.97rem;
+    }
+
+    /* Band sections: book and districts */
+    .band {
+      padding: 6rem 2rem;
+    }
+
+    .band.light { background: white; }
+    .band.cream { background: var(--cream); }
+
+    .band-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .band-container.text-only {
+      grid-template-columns: 1fr auto;
+    }
+
+    .band h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.6vw, 2.4rem);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .band h2 span { color: var(--maroon); }
+
+    .band p {
+      font-size: 1.1rem;
+      color: var(--gray-600);
+      margin-bottom: 1.5rem;
+    }
+
+    .band .btn-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .sp-cover {
+      width: 100%;
+      max-width: 280px;
+      aspect-ratio: 2 / 3;
+      border-radius: 6px 12px 12px 6px;
+      background: linear-gradient(160deg, var(--maroon-light) 0%, var(--maroon) 55%, var(--maroon-dark) 100%);
+      color: white;
+      padding: 1.75rem 1.4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: -6px 0 0 rgba(0, 0, 0, 0.18) inset, 0 24px 50px rgba(107, 26, 26, 0.3);
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+
+    .sp-cover:hover { transform: translateY(-4px); }
+    .sp-cover-title { font-family: var(--font-display); font-size: 2.1rem; font-weight: 700; line-height: 1.05; }
+    .sp-cover-rule { width: 3rem; height: 3px; background: var(--gold); margin: 1rem 0; }
+    .sp-cover-sub { font-size: 0.8rem; line-height: 1.45; color: rgba(255, 255, 255, 0.85); }
+    .sp-cover-author { font-family: var(--font-display); font-size: 1.1rem; color: var(--gold); letter-spacing: 0.04em; }
+
+    @media (max-width: 900px) {
+      .year-container,
+      .band-container,
+      .band-container.text-only {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .sp-cover { margin: 0 auto; }
+    }
+
+    @media (max-width: 600px) {
+      .year, .band { padding: 4rem 1rem; }
+      .band .btn-row { flex-direction: column; }
+    }
+
     /* Responsive */
     @media (max-width: 900px) {
       .hero-container {
@@ -1020,7 +1162,7 @@
         text-align: center;
       }
       
-      .nav-links {
+      .nav-links li:not(.keep-mobile) {
         display: none;
       }
     }
@@ -1654,10 +1796,11 @@
       <a href="#" class="logo">Melissa</a>
       <ul class="nav-links">
         <li><a href="#features">Features</a></li>
-        <li><a href="#why-melissa">Why Melissa</a></li>
         <li><a href="#pricing">Pricing</a></li>
+        <li><a href="/districts">For Districts</a></li>
+        <li><a href="/book">The Book</a></li>
         <li><a href="https://app.melissaforeducators.ai/login">Log In</a></li>
-        <li><a href="https://app.melissaforeducators.ai/signup" class="nav-cta">Start free</a></li>
+        <li class="keep-mobile"><a href="https://app.melissaforeducators.ai/signup" class="nav-cta">Start free</a></li>
       </ul>
     </nav>
   </header>
@@ -1670,14 +1813,15 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
           </svg>
-          New: Melissa builds your slides, with real images
+          New: your whole year, ready before school starts
         </div>
 
         <h1>What if lesson planning took <span>5 minutes</span> instead of 50?</h1>
 
         <p class="hero-subtitle">
-          Melissa creates your lessons, worksheets, quizzes, puzzles, and
-          presentations with real images, so you can focus on actually teaching.
+          Melissa for Teachers has your year ready before school starts, aligned to your
+          state's standards. Teach each lesson as is or make it yours, and let Melissa build
+          the slides, worksheets, puzzles and games, so you can focus on actually teaching.
         </p>
 
         <div class="hero-cta-group">
@@ -1770,6 +1914,36 @@
   </section>
 
   <!-- Features Section -->
+  <!-- Prepared Year Section -->
+  <section class="year" id="your-year">
+    <div class="year-container">
+      <div class="year-copy">
+        <span class="section-label">New for this school year</span>
+        <h2>Your year is <span>ready before it starts.</span></h2>
+        <p>
+          Every lesson for the year, aligned to your state's standards and waiting for you on day one,
+          starting with grades 6 to 12 in Texas and Virginia, with more states as teachers join.
+          Every lesson has the same strong shape: warm-up, I do, we do, you do, ticket out.
+        </p>
+        <p class="year-note">Your classroom stays your classroom. What you create and what your students say stays with you.</p>
+      </div>
+      <div class="year-choices">
+        <div class="year-choice">
+          <h3>Teach it as is</h3>
+          <p>Open today's lesson and go. Warm-up, checks and ticket out are already built in.</p>
+        </div>
+        <div class="year-choice">
+          <h3>Make it mine</h3>
+          <p>Add your own books, stories, examples and materials. Melissa adapts the lesson around them, keeps the same goal and checks, and gets better for you every time you do.</p>
+        </div>
+        <div class="year-choice">
+          <h3>Need something different?</h3>
+          <p>You can still opt out of a lesson and plan it your way. But the more you add to Melissa instead, the more your year fits your students.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="features" id="features">
     <div class="features-container">
       <div class="features-header">
@@ -1793,7 +1967,7 @@
             <svg viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
           </div>
           <h3>Lessons in minutes</h3>
-          <p>Tell Melissa what you're teaching. Get a complete lesson, hook, instruction, activities, closure, with standards alignment on every one.</p>
+          <p>Need something beyond your prepared year? Tell Melissa what you're teaching and get a complete lesson, warm-up to ticket out, with standards alignment on every one.</p>
           <span class="feature-tag">Standards aligned</span>
         </div>
 
@@ -1822,6 +1996,24 @@
           <h3>Print-ready puzzles</h3>
           <p>Crossword, word search, vocabulary matching, fill-in-the-blank, bingo with a unique card per student, and card sort. Clean black-and-white printing with separate answer keys. Free and unlimited.</p>
           <span class="feature-tag">Free and unlimited</span>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M6 11h4M8 9v4"/><path d="M15 12h.01M18 10h.01"/><path d="M17.32 5H6.68a4 4 0 00-3.978 3.59l-.9 9A2 2 0 003.79 20c.75 0 1.43-.42 1.77-1.09L7 16h10l1.44 2.91c.34.67 1.02 1.09 1.77 1.09a2 2 0 001.99-2.41l-.9-9A4 4 0 0017.32 5z"/></svg>
+          </div>
+          <h3>Classroom games</h3>
+          <p>Turn any topic into a review game in minutes. Play the Melissa Topics Game on the board with teams, or run Quick Clash, where students answer from their own devices. Free for every teacher.</p>
+          <span class="feature-tag">Free</span>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
+          </div>
+          <h3>Class Pulse</h3>
+          <p>Your students grade the class in under a minute from a code on their phones, no login needed. See today's results, trends over time and their comments. It's private to you unless you choose to share it.</p>
+          <span class="feature-tag">Private to you</span>
         </div>
 
         <div class="feature-card">
@@ -1897,9 +2089,9 @@
         <span class="section-label">Why We're Different</span>
         <h2>ChatGPT writes lesson plans.<br><span>Melissa builds teaching careers.</span></h2>
         <p class="comparison-subtitle">
-          ChatGPT and Gemini are powerful — for one-off tasks.
-          But they don't know your students, can't track growth,
-          and won't help you document your way to a raise.
+          ChatGPT and Gemini are powerful for one-off tasks.
+          But they don't know your students, don't have your year ready,
+          and don't know your state's standards.
         </p>
       </div>
 
@@ -1971,11 +2163,6 @@
               <td><span class="check-yes melissa-yes">✓</span></td>
             </tr>
             <tr>
-              <td>Document growth for TIA bonuses</td>
-              <td><span class="check-no">✗</span></td>
-              <td><span class="check-yes melissa-yes">✓</span></td>
-            </tr>
-            <tr>
               <td>One-click export reports</td>
               <td><span class="check-no">✗</span></td>
               <td><span class="check-yes melissa-yes">✓</span></td>
@@ -1985,8 +2172,7 @@
       </div>
 
       <p class="comparison-bottom-line">
-        The complete AI teaching system that documents student growth and helps you earn
-        <strong>TIA bonuses</strong>.
+        Your year ready on day one, and a teaching assistant that <strong>knows your students</strong>.
       </p>
     </div>
   </section>
@@ -2059,91 +2245,6 @@
     </div>
   </section>
 
-  <!-- TIA Section: "Turn Your Teaching Into a Bonus" -->
-  <section class="tia" id="tia">
-    <div class="tia-container">
-      <div class="tia-header">
-        <span class="section-label" style="color: var(--gold);">Teacher Incentives</span>
-        <h2>Turn your teaching into a <span>$32,000</span> bonus</h2>
-        <p class="tia-subtitle">
-          Texas TIA and similar programs reward teachers who document student growth.
-          Melissa does the documentation automatically.
-        </p>
-      </div>
-
-      <div class="tia-tiers">
-        <div class="tia-tier">
-          <p class="tia-tier-label">Recognized</p>
-          <p class="tia-tier-amount">$3,000 – $9,000</p>
-          <p class="tia-tier-detail">Top 33% of teachers</p>
-        </div>
-
-        <div class="tia-tier">
-          <p class="tia-tier-label">Exemplary</p>
-          <p class="tia-tier-amount">$6,000 – $18,000</p>
-          <p class="tia-tier-detail">Top 20% of teachers</p>
-        </div>
-
-        <div class="tia-tier featured">
-          <p class="tia-tier-label">Master</p>
-          <p class="tia-tier-amount">$12,000 – $32,000</p>
-          <p class="tia-tier-detail">Top 5% of teachers</p>
-        </div>
-      </div>
-
-      <div class="tia-features">
-        <div class="tia-feature-item">
-          <div class="tia-feature-icon">📊</div>
-          <div class="tia-feature-text">
-            <strong>Student Growth Tracking</strong>
-            <p>Automatic score trends, progress charts, and improvement data</p>
-          </div>
-        </div>
-        <div class="tia-feature-item">
-          <div class="tia-feature-icon">📁</div>
-          <div class="tia-feature-text">
-            <strong>Student Portfolios</strong>
-            <p>Before/after work samples with documented growth evidence</p>
-          </div>
-        </div>
-        <div class="tia-feature-item">
-          <div class="tia-feature-icon">🎯</div>
-          <div class="tia-feature-text">
-            <strong>Differentiation Documentation</strong>
-            <p>Automatic logging of personalized materials and accommodations</p>
-          </div>
-        </div>
-        <div class="tia-feature-item">
-          <div class="tia-feature-icon">📄</div>
-          <div class="tia-feature-text">
-            <strong>One-Click Export</strong>
-            <p>Generate TIA-ready PDF reports for your portfolio</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="tia-roi">
-        <div class="tia-roi-inner">
-          <div class="tia-roi-left">
-            <p class="tia-roi-label">Your investment</p>
-            <p class="tia-roi-price">$149<span>/year</span></p>
-          </div>
-          <div class="tia-roi-arrow">→</div>
-          <div class="tia-roi-right">
-            <p class="tia-roi-label">Your potential return</p>
-            <p class="tia-roi-return">20x – 215x</p>
-          </div>
-        </div>
-        <a href="#pricing" class="btn-primary" style="background: var(--gold); color: var(--maroon); margin-top: 1.5rem;">
-          See Pricing
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
   <!-- Pricing Section -->
   <section class="pricing" id="pricing">
     <div class="pricing-container">
@@ -2159,10 +2260,13 @@
             <span>forever</span>
           </div>
           <ul class="pricing-features">
+            <li>Your prepared year, aligned to your state's standards</li>
+            <li>Teach it as is, or make any lesson yours</li>
             <li>Unlimited lesson plans</li>
             <li>Unlimited worksheets, handouts, and materials</li>
             <li>Unlimited quizzes and assessments</li>
             <li>Unlimited puzzles and classroom games</li>
+            <li>Class Pulse student feedback</li>
             <li>Chat with Melissa</li>
             <li>Standards alignment on every lesson</li>
             <li>5 presentations per month</li>
@@ -2194,6 +2298,7 @@
             <li>Export to Google Slides, Google Docs, and OneDrive</li>
             <li>Per slide image control and regeneration</li>
             <li>Priority generation</li>
+            <li>Opt out of a prepared lesson when you need to</li>
           </ul>
           <a href="https://app.melissaforeducators.ai/signup" class="btn-primary">
             Get Melissa Pro
@@ -2201,20 +2306,20 @@
         </div>
 
         <div class="pricing-card">
-          <p class="pricing-label">Melissa for Schools</p>
+          <p class="pricing-label">Melissa for Districts</p>
           <div class="pricing-price">
-            <strong>$3,500</strong>
-            <span>/year</span>
+            <strong style="font-size: 2rem;">Let's talk</strong>
           </div>
           <ul class="pricing-features">
-            <li>Everything in Pro for every teacher</li>
-            <li>Standards coverage documentation and reporting</li>
-            <li>Admin dashboard and usage analytics</li>
-            <li>District AI policy controls</li>
-            <li>Priority support</li>
+            <li>Standard Practice in every school</li>
+            <li>A prepared year for every course, on your calendar</li>
+            <li>Views for principals, program management and the board</li>
+            <li>Weekly family notes and the Family Navigator</li>
+            <li>Connected to your student information system</li>
+            <li>Onboarding, certified trainers and program management</li>
           </ul>
-          <a href="mailto:hello@melissaforeducators.ai" class="btn-primary" style="background: var(--gray-900);">
-            Contact us
+          <a href="/districts" class="btn-primary" style="background: var(--gray-900);">
+            Talk to our team
           </a>
         </div>
       </div>
@@ -2226,12 +2331,56 @@
     </div>
   </section>
 
+  <!-- Staying Power book band -->
+  <section class="band light" id="book">
+    <div class="band-container">
+      <a href="/book" class="sp-cover" aria-label="Staying Power, by James Smith">
+        <div>
+          <div class="sp-cover-title">Staying Power</div>
+          <div class="sp-cover-rule"></div>
+          <div class="sp-cover-sub">How Standard Practice Creates Lasting Impact for Every Student and Every Teacher</div>
+        </div>
+        <div class="sp-cover-author">James Smith</div>
+      </a>
+      <div>
+        <span class="section-label">The new book</span>
+        <h2>Building schools where every student grows <span>and every teacher stays.</span></h2>
+        <p>
+          <em>Staying Power</em> shows what happens when a school system has a standard practice:
+          a shared, proven way of doing the work, so teachers get their time back and every family
+          knows what they're getting in any school. Melissa is the technology that carries it.
+        </p>
+        <div class="btn-row">
+          <a href="STAYING_POWER_AMAZON_URL" target="_blank" rel="noopener" class="btn-primary">Get it on Amazon</a>
+          <a href="/book" class="btn-secondary">About the book</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Districts band -->
+  <section class="band cream" id="districts">
+    <div class="band-container text-only">
+      <div>
+        <span class="section-label">Melissa for Districts</span>
+        <h2>Bring Standard Practice to <span>every school in your district.</span></h2>
+        <p style="margin-bottom: 0;">
+          The same teacher screens, plus everything a whole system needs: the prepared year on your district's
+          calendar, trusted measures, families kept in the loop, and a launch we run with your team.
+        </p>
+      </div>
+      <div class="btn-row">
+        <a href="/districts" class="btn-primary">Talk to our team</a>
+      </div>
+    </div>
+  </section>
+
   <!-- Final CTA -->
   <section class="final-cta">
     <div class="final-cta-container">
       <h2>Ready to get your weekends back?</h2>
       <p>
-        Join hundreds of teachers who are spending less time on paperwork and more time on what matters.
+        Join teachers across Texas and Virginia who are spending less time on paperwork and more time on what matters.
       </p>
       <a href="https://app.melissaforeducators.ai/signup" class="btn-primary">
         Start free
@@ -2259,6 +2408,7 @@
           <ul class="footer-links">
             <li><a href="#features">Features</a></li>
             <li><a href="#pricing">Pricing</a></li>
+            <li><a href="/districts">For Districts</a></li>
             <li><a href="https://app.melissaforeducators.ai/login">Log In</a></li>
             <li><a href="https://app.melissaforeducators.ai/signup">Sign Up</a></li>
           </ul>
@@ -2267,8 +2417,8 @@
         <div class="footer-section">
           <h4>Resources</h4>
           <ul class="footer-links">
-            <li><a href="https://www.amazon.com/dp/B0GJJ3MPG3" target="_blank" rel="noopener">The Book</a></li>
-            <li><a href="#">Three-Zone Framework</a></li>
+            <li><a href="/book">Staying Power</a></li>
+            <li><a href="https://www.amazon.com/dp/B0GJJ3MPG3" target="_blank" rel="noopener">Stop Banning What You Should Be Teaching</a></li>
           </ul>
         </div>
 
