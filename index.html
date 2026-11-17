@@ -1074,26 +1074,17 @@
     }
 
     .sp-cover {
+      display: block;
       width: 100%;
       max-width: 280px;
-      aspect-ratio: 2 / 3;
-      border-radius: 6px 12px 12px 6px;
-      background: linear-gradient(160deg, var(--maroon-light) 0%, var(--maroon) 55%, var(--maroon-dark) 100%);
-      color: white;
-      padding: 1.75rem 1.4rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      box-shadow: -6px 0 0 rgba(0, 0, 0, 0.18) inset, 0 24px 50px rgba(107, 26, 26, 0.3);
-      text-decoration: none;
+      border-radius: 4px 10px 10px 4px;
+      overflow: hidden;
+      box-shadow: 0 24px 50px rgba(107, 26, 26, 0.3);
       transition: transform 0.3s;
     }
 
     .sp-cover:hover { transform: translateY(-4px); }
-    .sp-cover-title { font-family: var(--font-display); font-size: 2.1rem; font-weight: 700; line-height: 1.05; }
-    .sp-cover-rule { width: 3rem; height: 3px; background: var(--gold); margin: 1rem 0; }
-    .sp-cover-sub { font-size: 0.8rem; line-height: 1.45; color: rgba(255, 255, 255, 0.85); }
-    .sp-cover-author { font-family: var(--font-display); font-size: 1.1rem; color: var(--gold); letter-spacing: 0.04em; }
+    .sp-cover img { width: 100%; height: auto; display: block; }
 
     @media (max-width: 900px) {
       .year-container,
@@ -2335,12 +2326,7 @@
   <section class="band light" id="book">
     <div class="band-container">
       <a href="/book" class="sp-cover" aria-label="Staying Power, by James Smith">
-        <div>
-          <div class="sp-cover-title">Staying Power</div>
-          <div class="sp-cover-rule"></div>
-          <div class="sp-cover-sub">How Standard Practice Creates Lasting Impact for Every Student and Every Teacher</div>
-        </div>
-        <div class="sp-cover-author">James Smith</div>
+        <img src="/public/images/staying-power-cover.jpg" alt="Staying Power by James Smith, book cover" width="625" height="1000">
       </a>
       <div>
         <span class="section-label">The new book</span>
