@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Melissa for Teachers | Your Year, Ready Before School Starts</title>
-  <meta name="description" content="Melissa for Teachers gets your year ready before school starts, aligned to your state's standards, plus slides with real images, worksheets, puzzles, classroom games and Class Pulse. Free forever, no credit card.">
+  <title>Melissa for Teachers | Free Through June 2027</title>
+  <meta name="description" content="Sign up now and get the rest of your year, all of Melissa, and your life back, free through June 30, 2027. Lessons, units, slides with real images, worksheets, student assignments, projects, games and Class Pulse. No credit card.">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Melissa for Educators | Get Your Weekends Back">
-  <meta property="og:description" content="The AI teaching assistant that builds complete presentations with real images, plus lessons, worksheets, quizzes, and print-ready puzzles. Free forever, no credit card.">
+  <meta property="og:title" content="Melissa for Teachers | The Rest of Your Year, Free">
+  <meta property="og:description" content="Get the rest of your year, all of Melissa, and your life back. Free for teachers who join now, through June 30, 2027. No credit card.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://melissaforeducators.ai">
 
@@ -532,6 +532,100 @@
       border-radius: 100px;
     }
     
+    /* Everything included (free-through-June promotion) */
+    .included-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.75rem;
+    }
+    .included-group {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
+    }
+    .included-group h3 {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--maroon);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .included-list {
+      list-style: none;
+      display: grid;
+      gap: 1rem;
+    }
+    .included-list li {
+      position: relative;
+      padding-left: 1.75rem;
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+    .included-list li::before {
+      content: "\2713";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--maroon);
+      font-weight: 700;
+    }
+    .included-list strong {
+      color: var(--gray-900);
+    }
+    .included-foot {
+      text-align: center;
+      margin-top: 2.5rem;
+      color: var(--gray-600);
+    }
+    .included-foot .btn-primary {
+      margin-top: 1rem;
+    }
+    .promo-terms {
+      max-width: 760px;
+      margin: 2rem auto 0;
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: 14px;
+      padding: 1.5rem 1.75rem;
+      text-align: left;
+      color: var(--gray-600);
+    }
+    .promo-terms h3 {
+      font-family: var(--font-display);
+      color: var(--gray-900);
+      font-size: 1.15rem;
+      margin-bottom: 0.75rem;
+    }
+    .promo-terms ul {
+      list-style: none;
+      display: grid;
+      gap: 0.5rem;
+    }
+    .promo-terms li {
+      padding-left: 1.25rem;
+      position: relative;
+    }
+    .promo-terms li::before {
+      content: "\2022";
+      position: absolute;
+      left: 0.2rem;
+      color: var(--maroon);
+    }
+    .pricing-cards.two-up {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      max-width: 820px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 900px) {
+      .included-grid { grid-template-columns: 1fr; }
+      .pricing-cards.two-up { grid-template-columns: 1fr; }
+    }
+
     /* AI Guardrails Section */
     .guardrails {
       padding: 6rem 2rem;
@@ -1804,15 +1898,15 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
           </svg>
-          New: your whole year, ready before school starts
+          Free through June 30, 2027 for teachers who join now
         </div>
 
-        <h1>What if lesson planning took <span>5 minutes</span> instead of 50?</h1>
+        <h1>Get the rest of your year, all of Melissa, <span>and your life back.</span> Free.</h1>
 
         <p class="hero-subtitle">
-          Melissa for Teachers has your year ready before school starts, aligned to your
-          state's standards. Teach each lesson as is or make it yours, and let Melissa build
-          the slides, worksheets, puzzles and games, so you can focus on actually teaching.
+          Sign up now and every part of Melissa for Teachers is yours, free, through June 30, 2027.
+          Lay out the rest of your units in an afternoon, and let Melissa build the lessons, slides,
+          worksheets, puzzles and games, so your evenings and weekends are yours again.
         </p>
 
         <div class="hero-cta-group">
@@ -1823,12 +1917,12 @@
             </svg>
           </a>
           <a href="#features" class="btn-secondary">
-            See what's included
+            See everything included
           </a>
         </div>
 
         <p class="hero-note">
-          <strong>Free forever.</strong> No credit card required.
+          <strong>All of it, free until June 30, 2027.</strong> No credit card. Paid plans begin with the 2027-28 school year, and teachers who join now get a founding price.
         </p>
       </div>
       
@@ -1938,83 +2032,57 @@
   <section class="features" id="features">
     <div class="features-container">
       <div class="features-header">
-        <span class="section-label">What Melissa does</span>
-        <h2>Everything you need. Nothing you don't.</h2>
-        <p class="features-subtitle">Built by educators who understand how teaching actually works.</p>
+        <span class="section-label">Everything included</span>
+        <h2>All of Melissa. <span style="color: var(--maroon);">Free through June 30, 2027.</span></h2>
+        <p class="features-subtitle">Nothing held back for a paid plan. Join now and use every feature below, all year.</p>
       </div>
 
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H6a2 2 0 01-2-2V5z"/><path d="M8 21h8M12 17v4"/><path d="M8 9l2.5 2.5L14 8l2 2"/></svg>
-          </div>
-          <h3>Presentations with real images</h3>
-          <p>Melissa drafts an outline you approve, then builds the slides with real images, not empty placeholders: charts and diagrams drawn from your lesson, and licensed photos with credit attached.</p>
-          <span class="feature-tag">The headline upgrade</span>
+      <div class="included-grid">
+        <div class="included-group">
+          <h3><span aria-hidden="true">📅</span> Plan the rest of your year</h3>
+          <ul class="included-list">
+            <li><strong>Prepare a Class.</strong> A complete lesson plan, with a handout, worksheet, exit ticket and homework, each with an answer key, in minutes.</li>
+            <li><strong>Unit planner.</strong> Lay out a whole unit on real dates, around your days off, with checkpoints, review days and a unit test. Turn any day into a full lesson.</li>
+            <li><strong>Standards on every lesson.</strong> Each lesson cites your state's standards, and your class's Standards tab shows what you've taught.</li>
+            <li><strong>Chat with Melissa.</strong> Talk through a hard topic, a tricky class or a new activity, like a colleague who's always free.</li>
+          </ul>
         </div>
 
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
-          </div>
-          <h3>Lessons in minutes</h3>
-          <p>Need something beyond your prepared year? Tell Melissa what you're teaching and get a complete lesson, warm-up to ticket out, with standards alignment on every one.</p>
-          <span class="feature-tag">Standards aligned</span>
+        <div class="included-group">
+          <h3><span aria-hidden="true">🖼️</span> Materials in minutes</h3>
+          <ul class="included-list">
+            <li><strong>Presentations with real images.</strong> Approve an outline and get slides with charts and diagrams drawn from your lesson and licensed photos with credit. Unlimited.</li>
+            <li><strong>AI illustrations.</strong> Safe, classroom-ready illustrations made on demand, with a generous monthly allowance.</li>
+            <li><strong>Download and export.</strong> Worksheets as PDF or Word, and export to Google Slides, Google Docs and OneDrive.</li>
+            <li><strong>Print-ready puzzles.</strong> Crossword, word search, vocabulary matching, fill in the blank, bingo with a card for every student, and card sort, with answer keys.</li>
+          </ul>
         </div>
 
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-          </div>
-          <h3>Worksheets and materials</h3>
-          <p>Generate worksheets, handouts, exit tickets, and study guides instantly. PDF and PowerPoint download, print ready.</p>
-          <span class="feature-tag">Print ready</span>
+        <div class="included-group">
+          <h3><span aria-hidden="true">🎒</span> Your students, always free</h3>
+          <ul class="included-list">
+            <li><strong>Class codes and rosters.</strong> Add students one at a time, from a spreadsheet, or let them join with a class code.</li>
+            <li><strong>A copy made for each student.</strong> Melissa rewrites each student's assignment around their interests and accommodations, with the same skills and difficulty.</li>
+            <li><strong>Assignments with clear AI rules.</strong> Set each one as AI Prohibited, AI Assisted or AI Required. Ask Melissa helps students only as much as the zone allows.</li>
+            <li><strong>Practice scored for you.</strong> Simple questions are scored the moment students submit, and nothing counts until you approve it.</li>
+            <li><strong>Student Projects, grades 6 to 12.</strong> Students research, plan and build a project with an AI teammate and team spaces, and how well they work with AI counts.</li>
+          </ul>
         </div>
 
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
-          </div>
-          <h3>Quizzes and assessments</h3>
-          <p>Build quizzes and assessments in a click, with separate answer keys. Unlimited, on every plan.</p>
-          <span class="feature-tag">With answer keys</span>
+        <div class="included-group">
+          <h3><span aria-hidden="true">🎲</span> Your classroom</h3>
+          <ul class="included-list">
+            <li><strong>Classroom games.</strong> Turn any topic into the Melissa Topics Game on the board, or Quick Clash on students' own devices.</li>
+            <li><strong>Class Pulse.</strong> Students grade the class in under a minute from a code on their phones, no login needed. Private to you unless you share it.</li>
+            <li><strong>Accommodations built in.</strong> Seven accommodation types, from extended time to simplified language, applied to every student's copy.</li>
+            <li><strong>Assignment results.</strong> See the class average, the hardest question and the most common wrong answers at a glance.</li>
+          </ul>
         </div>
+      </div>
 
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 4v16"/></svg>
-          </div>
-          <h3>Print-ready puzzles</h3>
-          <p>Crossword, word search, vocabulary matching, fill-in-the-blank, bingo with a unique card per student, and card sort. Clean black-and-white printing with separate answer keys. Free and unlimited.</p>
-          <span class="feature-tag">Free and unlimited</span>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M6 11h4M8 9v4"/><path d="M15 12h.01M18 10h.01"/><path d="M17.32 5H6.68a4 4 0 00-3.978 3.59l-.9 9A2 2 0 003.79 20c.75 0 1.43-.42 1.77-1.09L7 16h10l1.44 2.91c.34.67 1.02 1.09 1.77 1.09a2 2 0 001.99-2.41l-.9-9A4 4 0 0017.32 5z"/></svg>
-          </div>
-          <h3>Classroom games</h3>
-          <p>Turn any topic into a review game in minutes. Play the Melissa Topics Game on the board with teams, or run Quick Clash, where students answer from their own devices. Free for every teacher.</p>
-          <span class="feature-tag">Free</span>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
-          </div>
-          <h3>Class Pulse</h3>
-          <p>Your students grade the class in under a minute from a code on their phones, no login needed. See today's results, trends over time and their comments. It's private to you unless you choose to share it.</p>
-          <span class="feature-tag">Private to you</span>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
-          </div>
-          <h3>Chat with Melissa</h3>
-          <p>Ask about teaching strategies, get help with difficult topics, brainstorm activities. Like having a colleague always ready to help.</p>
-          <span class="feature-tag">Always available</span>
-        </div>
+      <div class="included-foot">
+        <p>Students never pay. Teachers who join now keep all of this free until June 30, 2027.</p>
+        <a href="https://app.melissaforeducators.ai/signup" class="btn-primary">Claim your free year</a>
       </div>
     </div>
   </section>
@@ -2028,7 +2096,7 @@
         <p>
           Most AI tools leave you empty placeholders. Melissa builds accurate
           charts and diagrams from your lesson, adds licensed photos with credit,
-          and, on Pro, creates classroom-ready illustrations.
+          and creates classroom-ready illustrations too.
         </p>
         <div class="images-types">
           <div class="image-type">
@@ -2048,8 +2116,8 @@
           <div class="image-type">
             <div class="image-type-icon">🎨</div>
             <div class="image-type-text">
-              <strong>Custom AI illustrations<span class="pro-pill">Pro</span></strong>
-              <p>Safe, classroom-ready illustrations generated on demand. The visible Pro unlock.</p>
+              <strong>Custom AI illustrations<span class="pro-pill">Included</span></strong>
+              <p>Safe, classroom-ready illustrations generated on demand, with a generous monthly allowance.</p>
             </div>
           </div>
         </div>
@@ -2239,60 +2307,32 @@
   <!-- Pricing Section -->
   <section class="pricing" id="pricing">
     <div class="pricing-container">
-      <span class="section-label">Simple pricing</span>
-      <h2>Free forever. Upgrade when you're ready.</h2>
-      <p class="pricing-subtitle">No trial, no credit card to start. Annual billing on paid plans.</p>
+      <span class="section-label">Pricing</span>
+      <h2>Free through June 30, 2027. All of it.</h2>
+      <p class="pricing-subtitle">Join now and every part of Melissa for Teachers is yours until June 30, 2027. No credit card, no trial clock.</p>
 
-      <div class="pricing-cards">
-        <div class="pricing-card">
-          <p class="pricing-label">Melissa Free</p>
+      <div class="pricing-cards two-up">
+        <div class="pricing-card featured">
+          <span class="pricing-badge">Join now</span>
+          <p class="pricing-label">Melissa for Teachers</p>
           <div class="pricing-price">
             <strong>$0</strong>
-            <span>forever</span>
+            <span>through June 30, 2027</span>
           </div>
           <ul class="pricing-features">
-            <li>Your prepared year, aligned to your state's standards</li>
-            <li>Teach it as is, or make any lesson yours</li>
-            <li>Unlimited lesson plans</li>
-            <li>Unlimited worksheets, handouts, and materials</li>
-            <li>Unlimited quizzes and assessments</li>
-            <li>Unlimited puzzles and classroom games</li>
+            <li>Every feature, nothing held back</li>
+            <li>Prepare a Class and the unit planner</li>
+            <li>Unlimited presentations with real images</li>
+            <li>AI illustrations, with a generous monthly allowance</li>
+            <li>Worksheets, puzzles and classroom games</li>
+            <li>PDF and Word downloads, plus Google Slides, Google Docs and OneDrive export</li>
+            <li>Assignments with AI zones and Ask Melissa for students</li>
+            <li>Student Projects with an AI teammate (grades 6 to 12)</li>
             <li>Class Pulse student feedback</li>
-            <li>Chat with Melissa</li>
-            <li>Standards alignment on every lesson</li>
-            <li>5 presentations per month</li>
-            <li>Charts, diagrams, and photography included in presentations</li>
-            <li>PDF and PowerPoint download, print ready</li>
-          </ul>
-          <a href="https://app.melissaforeducators.ai/signup" class="btn-primary" style="background: var(--gray-900);">
-            Start free
-          </a>
-          <p class="pricing-note" style="text-align: left; margin-top: 1rem;">
-            Presentations are the most expensive thing Melissa creates, so free
-            accounts get five each month. Even at the cap you still get the
-            outline, slide text, and speaker notes. Nothing is lost.
-          </p>
-        </div>
-
-        <div class="pricing-card featured">
-          <span class="pricing-badge">Most popular</span>
-          <p class="pricing-label">Melissa Pro</p>
-          <div class="pricing-price">
-            <strong>$149</strong>
-            <span>/year</span>
-          </div>
-          <ul class="pricing-features">
-            <li>Everything in Free</li>
-            <li>Unlimited presentations</li>
-            <li>AI generated illustrations</li>
-            <li>No Melissa footer</li>
-            <li>Export to Google Slides, Google Docs, and OneDrive</li>
-            <li>Per slide image control and regeneration</li>
-            <li>Priority generation</li>
-            <li>Opt out of a prepared lesson when you need to</li>
+            <li>Students are always free</li>
           </ul>
           <a href="https://app.melissaforeducators.ai/signup" class="btn-primary">
-            Get Melissa Pro
+            Claim your free year
           </a>
         </div>
 
@@ -2315,10 +2355,15 @@
         </div>
       </div>
 
-      <p class="pricing-note">
-        Free is a real plan, not a sample. No free trial anywhere, because Free
-        never expires.
-      </p>
+      <div class="promo-terms">
+        <h3>What happens after June 2027?</h3>
+        <ul>
+          <li>Paid plans for teachers begin with the 2027-28 school year.</li>
+          <li>Teachers who join now get a founding price when paid plans begin.</li>
+          <li>Students are always free.</li>
+          <li>Why free? We want to learn what you can't live without before we set next year's price. Use all of it, and tell us.</li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -2364,12 +2409,13 @@
   <!-- Final CTA -->
   <section class="final-cta">
     <div class="final-cta-container">
-      <h2>Ready to get your weekends back?</h2>
+      <h2>Get the rest of your year back.</h2>
       <p>
-        Join teachers across Texas and Virginia who are spending less time on paperwork and more time on what matters.
+        All of Melissa, free through June 30, 2027 for teachers who join now. Join teachers across Texas
+        and Virginia who are spending less time on paperwork and more time on what matters.
       </p>
       <a href="https://app.melissaforeducators.ai/signup" class="btn-primary">
-        Start free
+        Claim your free year
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M5 12h14M12 5l7 7-7 7"/>
         </svg>
