@@ -626,6 +626,83 @@
       .pricing-cards.two-up { grid-template-columns: 1fr; }
     }
 
+    /* Student data and AI safety */
+    .trust {
+      padding: 6rem 2rem;
+      background: var(--cream);
+    }
+    .trust-container { max-width: 1200px; margin: 0 auto; }
+    .trust-header { text-align: center; max-width: 780px; margin: 0 auto 3.5rem; }
+    .trust-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      color: var(--gray-900);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .trust-header h2 span { color: var(--maroon); }
+    .trust-header p { font-size: 1.15rem; color: var(--gray-600); line-height: 1.7; }
+    .trust-header a { color: var(--maroon); font-weight: 600; }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+    }
+    .trust-col {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
+      border-top: 4px solid var(--gold);
+    }
+    .trust-col h3 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      color: var(--maroon);
+      margin-bottom: 1.25rem;
+    }
+    .trust-col ul { list-style: none; display: grid; gap: 1rem; }
+    .trust-col li {
+      position: relative;
+      padding-left: 1.75rem;
+      color: var(--gray-600);
+      line-height: 1.6;
+      font-size: 0.97rem;
+    }
+    .trust-col li::before {
+      content: "\2713";
+      position: absolute;
+      left: 0;
+      color: var(--maroon);
+      font-weight: 700;
+    }
+    .trust-col strong { color: var(--gray-900); }
+    .trust-quote {
+      max-width: 820px;
+      margin: 3rem auto 0;
+      text-align: center;
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: clamp(1.25rem, 2.6vw, 1.6rem);
+      color: var(--maroon);
+      line-height: 1.5;
+    }
+    .trust-links {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+    .trust-links a { color: var(--maroon); font-weight: 600; text-decoration: none; }
+    .trust-links a:hover { text-decoration: underline; }
+    @media (max-width: 900px) {
+      .trust-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .trust { padding: 4rem 1rem; }
+    }
+
     /* AI Guardrails Section */
     .guardrails {
       padding: 6rem 2rem;
@@ -2266,7 +2343,7 @@
           No more guessing.
         </p>
         <div class="guardrails-ctas">
-          <a href="#" class="guardrails-cta">
+          <a href="#student-data" class="guardrails-cta">
             Learn about the Three-Zone Framework
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -2313,6 +2390,63 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Student data and AI safety -->
+  <section class="trust" id="student-data">
+    <div class="trust-container">
+      <div class="trust-header">
+        <span class="section-label">Student data and AI safety</span>
+        <h2>Safe, secure and good for learning. <span>All at once.</span></h2>
+        <p>
+          In <a href="https://www.amazon.com/dp/B0GJJ3MPG3" target="_blank" rel="noopener"><em>Stop Banning What You Should Be Teaching</em></a>,
+          James Smith makes the case that schools don't have to choose between protecting students and teaching them
+          to use AI well. Melissa is built on that idea: student data stays protected, the AI only gets what it needs,
+          and every assignment makes clear how AI may help.
+        </p>
+      </div>
+
+      <div class="trust-grid">
+        <div class="trust-col">
+          <h3>Student data stays protected</h3>
+          <ul>
+            <li><strong>Never sold, never used for ads, never used to train AI.</strong> Student data is used only to run Melissa for your class.</li>
+            <li><strong>FERPA and COPPA.</strong> Melissa acts as a school official under FERPA and relies on the COPPA school-consent exception, collecting only what the class needs.</li>
+            <li><strong>No student email addresses.</strong> Students join with a class code. Class Pulse and Quick Clash need no student login at all.</li>
+            <li><strong>Locked down.</strong> Data is encrypted in transit and at rest, and each teacher's classes are kept separate from everyone else's.</li>
+            <li><strong>Ready for your district.</strong> A data processing agreement is available on request.</li>
+          </ul>
+        </div>
+
+        <div class="trust-col">
+          <h3>The AI gets only what it needs</h3>
+          <ul>
+            <li><strong>No names in what Melissa makes.</strong> Lessons, slides, puzzles and games are created without student names or personal details.</li>
+            <li><strong>Accommodations without the paperwork.</strong> The AI sees only a plain instruction, like "reduce the number of items." Your notes, IEP and 504 details never leave Melissa.</li>
+            <li><strong>Personal, not personal data.</strong> Assignments are rewritten around a student's interests, and you can turn that off for any student.</li>
+            <li><strong>Safe images.</strong> Generated illustrations never show real or identifiable people, and unsafe requests are declined.</li>
+          </ul>
+        </div>
+
+        <div class="trust-col">
+          <h3>AI that supports learning</h3>
+          <ul>
+            <li><strong>Clear rules on every assignment.</strong> AI Prohibited, AI Assisted or AI Required, so students know exactly how Melissa may help, and Melissa follows the same rule.</li>
+            <li><strong>Help that teaches.</strong> When an assignment is AI Assisted, Melissa gives hints and questions, not answers.</li>
+            <li><strong>A trusted adult first.</strong> If a student says they're hurt or unsafe, Melissa encourages them to talk to a trusted adult and shares the 988 crisis line. In Student Projects, it also flags the concern to the teacher.</li>
+            <li><strong>Teachers decide.</strong> Scores count only after you approve them, and in Student Projects you see how each student worked with AI.</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="trust-quote">Students are going to use AI. The question is whether we teach them to use it well, and keep them safe while they learn.</p>
+
+      <div class="trust-links">
+        <a href="https://www.amazon.com/dp/B0GJJ3MPG3" target="_blank" rel="noopener">Read Stop Banning What You Should Be Teaching</a>
+        <a href="https://app.melissaforeducators.ai/for-it">Details for IT administrators</a>
+        <a href="https://app.melissaforeducators.ai/privacy">Privacy policy</a>
       </div>
     </div>
   </section>
@@ -2472,6 +2606,8 @@
             <li><a href="https://gardenprayerpublishing.com">Garden Prayer Publishing</a></li>
             <li><a href="mailto:hello@melissaforeducators.ai">Contact</a></li>
             <li><a href="https://app.melissaforeducators.ai/terms">Terms</a></li>
+            <li><a href="#student-data">Student data and AI safety</a></li>
+            <li><a href="https://app.melissaforeducators.ai/for-it">For IT administrators</a></li>
             <li><a href="https://app.melissaforeducators.ai/privacy">Privacy</a></li>
           </ul>
         </div>
